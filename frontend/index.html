@@ -1,0 +1,39 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>Recipe Book</title>
+    <meta name="description" content="A list of recipes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>All Recipes</li>
+        <li>Breakfast</li>
+        <li>Lunch</li>
+        <li>Snack</li>
+        <li>Dinner</li>
+        <li>New Recipe</li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h1>Recipes</h1>
+      <div id="new-recipe-container">
+        <form id="new-recipe-form">
+          <input type="text" />
+          <input type="submit" />
+        </form>
+      </div>
+      
+      <div id="recipes-container">
+        
+      </div>
+    </main>
+    <script src="js/components/recipes.js" async></script>
+    <script src="js/components/recipe.js" async></script>
+    <script src="js/components/app.js" async></script>
+    <script src="js/adapters/RecipesAdapter.js" async></script>
+    <script src="js/index.js" async></script>
+  </body>
+</html>
