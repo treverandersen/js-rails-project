@@ -2,11 +2,12 @@
   <head>
     <meta charset="utf-8">
     <title>Recipe Book</title>
-    <meta name="description" content="A list of recipes.">
+    <meta name="description" content="A list of categorized recipes.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+
     <nav>
       <ul>
         <li>All Recipes</li>
@@ -17,19 +18,73 @@
         <li>New Recipe</li>
       </ul>
     </nav>
+
     <main class="container">
-      <h1>Recipes</h1>
+
       <div id="new-recipe-container">
-        <form id="new-recipe-form">
-          <input type="text" />
-          <input type="submit" />
+        <form id="new-recipe-form" action="#" method="post">
+          <h4>New Recipe:</h4>
+          <div>
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" name="recipe-name" id="recipe-name" value="">
+          </div>
+          
+          <div>
+            <label for="select-choice">Category:</label>
+            <select name="select-category" id="select-category">
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Snack">Snack</option>
+              <option value="Dinner">Dinner</option>
+            </select>
+          </div>
+
+          <div>
+            <h4>Ingredient:</h4>
+            <label for="ingredient-amount">Amount:</label>
+            <input type="number" name="amount" id="amount" value="">
+
+            <label for="select-choice">Measurement:</label>
+            <select name="select-measurement" id="select-measurement">
+              <option value="Teaspoon">Teaspoon</option>
+              <option value="Tablespoon">Tablespoon</option>
+              <option value="Ounces">Ounces</option>
+              <option value="Cup">Cup</option>
+              <option value="Pint">Pint</option>
+              <option value="Quart">Quart</option>
+              <option value="Gallon">Gallon</option>
+              <option value="Milliliter">Milliliter</option>
+              <option value="Liter">Liter</option>
+            </select>
+
+            <label for="ingredient-name">Name:</label>
+            <input type="text" name="ingredient-name" id="ingredient-name" value="">
+
+            <button>add another ingredient</button>
+          </div>
+
+          <div>
+            <h4>Instructions:</h4>
+            <label for="instruction-title">Title:</label>
+            <input type="text" name="instruction-title" id="instruction-title" value="">
+
+            <label for="textarea">Description:</label>
+            <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+
+            <button>add another instruction step</button>
+          </div>
+
+          <input type="submit" value="Save Recipe"/>
         </form>
       </div>
-      
+
+      <h1>Recipes</h1>
       <div id="recipes-container">
         
       </div>
+
     </main>
+
     <script src="js/components/recipes.js" async></script>
     <script src="js/components/recipe.js" async></script>
     <script src="js/components/app.js" async></script>
